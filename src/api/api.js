@@ -1,7 +1,7 @@
 import axios from "axios";
 import Interceptors from "./interceptors";
 const awooNews = axios.create({
-  baseURL: "https://newsapi.org/v2/everything?apiKey=965b67b40af540419b789b1b3259a598",
+  baseURL: `https://newsapi.org/v2/everything?apiKey=${process.env.VUE_APP_KEY}`,
 });
 //API攔截
 Interceptors(awooNews);
